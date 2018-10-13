@@ -9,3 +9,9 @@ y = np.flip(x, axis=0)
 y = np.flipud(x)
 print(x)
 print(y)
+
+A = np.ones((5, 5, 3))
+B = 2*np.ones((5, 5))
+
+multiply = np.einsum('ijk,jk', A, B)
+print(multiply.shape)
